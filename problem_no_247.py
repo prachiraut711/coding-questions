@@ -30,7 +30,7 @@ def maxProfit(prices , k):
             max_diff = -prices[0]
             for i in range(1, n):
                 dp[t][i] = max(dp[t][i-1], prices[i] + max_diff)
-                max_diff = max(max_diff, dp[t-1][i-1] - prices[i])  # ✅ FIXED
+                max_diff = max(max_diff, dp[t-1][i-1] - prices[i])
                 
         return dp[k][n-1]
             
