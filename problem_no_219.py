@@ -26,11 +26,12 @@ class Solution:
 
         while fast and fast.next:
             slow = slow.next
-            fast = fast.next
+            fast = fast.next.next
 
             if slow == fast:
                 return True
         return False              # here print nahi kel bcz pos is provided by leetcode backend so we just have to write code
+
 
 # you dont give pos as parametee
 
